@@ -1,0 +1,162 @@
+.title h1 {
+  position: fixed; /* 상단에 고정 */
+  top: 0; /* 화면 상단에 위치 */
+  left: 50%; /* 수평 중앙 정렬 */
+  transform: translateX(-50%); /* 중앙 정렬 보정 */
+  width: 100%; /* 전체 너비를 사용 */
+  background-color: #fff; /* 배경색 설정 (투명도가 필요할 경우 조정) */
+  padding: 10px 0; /* 상하 패딩 추가 */
+  text-align: center; /* 텍스트 중앙 정렬 */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 상단 그림자 추가 */
+  z-index: 10; /* 다른 요소들 위에 위치하도록 설정 */
+}
+
+.memo {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 400px; /* 제목과 컨텐츠 사이 여백 */
+  width: 100%;
+  max-width: 1200px; /* 최대 너비 설정 */
+}
+
+.box {
+  display: block;
+  width: 260px;
+  height: 200px;
+  font-size: 25px;
+  padding: 10px;
+}
+
+.savebox {
+  border: 1px solid black;
+  display: block;
+  width: 280px;
+  height: 200px;
+  font-size: 20px;
+  padding: 15px;
+  border: none;
+  outline: none;
+  background-color: #fffb8f;
+  box-shadow: 5px 5px;
+}
+
+.delete_btn {
+  background-color: #ffdd57;
+  border: none;
+  padding: 8px 16px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, transform 0.1s;
+  border-radius: 10px;
+  font-family: "Comic Sans MS", "Arial", sans-serif;
+  margin-bottom: 40px;
+}
+body {
+  font-family: "Arial", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #f0f0f0;
+  height: 100vh;
+  margin: 0;
+}
+
+.title {
+  margin-bottom: 20px;
+}
+
+.memojang {
+  margin-bottom: 30px;
+}
+
+.memojnag_input_text {
+  display: block;
+  width: 200px;
+  height: 150px;
+  font-size: 20px;
+  padding: 15px;
+  border: none;
+  outline: none;
+  background-color: #fffb8f;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+  resize: none;
+  margin-bottom: 15px;
+  font-family: "Comic Sans MS", "Arial", sans-serif;
+  border-radius: 10px;
+}
+
+.memojang_input_btn {
+  background-color: #ffdd57;
+  border: none;
+  padding: 8px 16px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, transform 0.1s;
+  border-radius: 10px;
+  font-family: "Comic Sans MS", "Arial", sans-serif;
+}
+
+.memojang_input_btn:hover {
+  background-color: #ffc107;
+  transform: scale(1.05);
+}
+
+.saved_memojang {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 세 개의 열을 정의 */
+  gap: 20px; /* 그리드 항목 간의 간격 조정 */
+  width: 100%; /* 컨테이너의 너비를 설정, 필요에 따라 조정 가능 */
+  margin-left: 100px; /* 필요 시 설정 */
+  margin-right: auto; /* 필요 시 설정 */
+  padding: 20px; /* 필요 시 설정 */
+  box-sizing: border-box; /* 패딩을 포함하여 너비를 조정 */
+}
+
+.savebox {
+  background-color: #fffb8f;
+  width: 200px;
+  height: 150px;
+  margin-bottom: 10px;
+  padding: 15px; /* 내용과 테두리 사이의 여백 */
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); /* 그림자 추가 */
+  position: relative; /* 삭제 버튼 등의 상대 위치를 설정할 수 있음 */
+  font-family: "Comic Sans MS", "Arial", sans-serif; /* 텍스트 폰트 설정 */
+  word-wrap: break-word; /* 긴 단어가 박스를 넘어가지 않도록 설정 */
+  border-radius: 10px; /* 박스의 모서리를 둥글게 설정 */
+}
+
+.savebox::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-color: #ffdd57;
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  transform: rotate(45deg);
+}
+
+.savebox button {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: #ff7675;
+  border: none;
+  color: white;
+  padding: 6px 12px;
+  cursor: pointer;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, transform 0.1s;
+  border-radius: 8px;
+  font-family: "Comic Sans MS", "Arial", sans-serif;
+}
+
+.savebox button:hover {
+  background-color: #d63031;
+  transform: scale(1.05);
+}
