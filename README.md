@@ -1,0 +1,3 @@
+# Memojang
+
+Memojang is good!
